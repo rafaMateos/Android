@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CambiarColorTexto</string>
+    <string name="BotonRojo">Rojo</string>
+    <string name="BotonVerde">Verde</string>
+    ç <string name="AlinearCentro">Centro2</string>
+
+</resources>

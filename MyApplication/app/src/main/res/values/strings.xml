@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name" translatable="false">My Application</string>
+    <string name="IntroduceNum1" translatable="false">Introduce el primer numero</string>
+    <string name="IntroduceNum2" translatable="false">Introduceme el segundo numero</string>
+    <string name="botonTodo">Calcular +,-,* y /</string>
+
+
+</resources>

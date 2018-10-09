@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="PedirNumero1">Dime un numero</string>
+</resources>
