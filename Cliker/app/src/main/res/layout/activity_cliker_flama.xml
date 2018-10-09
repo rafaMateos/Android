@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context=".ClikerFlama">
+
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="@string/espana"/>
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/banderaPrimera" />
+
+    <Button
+        android:id="@+id/botonUno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="comprobar"/>
+
+    <Button
+        android:id="@+id/botonDos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="comprobar" />
+
+    <Button
+        android:id="@+id/botonTres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="comprobar" />
+
+    <Button
+        android:id="@+id/botonCuatro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="comprobar" />
+
+
+</LinearLayout>

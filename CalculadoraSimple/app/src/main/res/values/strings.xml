@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CalculadoraSimple</string>
+    <string name="suma">+</string>
+    <string name="resta">-</string>
+    <string name="multiplicacion">*</string>
+    <string name="division">/</string>
+    <string name="boton">Calcula</string>
+</resources>

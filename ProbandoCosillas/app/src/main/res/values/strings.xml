@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProbandoCosillas</string>
+    <string name="Nombre">Introduce nombre</string>
+    <string name="SexoTexto">Introduce Sexo</string>
+    <string name="Boton">Enviar</string>
+
+</resources>
