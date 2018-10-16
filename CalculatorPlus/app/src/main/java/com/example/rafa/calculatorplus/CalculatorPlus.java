@@ -1,21 +1,29 @@
 package com.example.rafa.calculatorplus;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static android.widget.Toast.makeText;
+import static java.lang.Double.parseDouble;
 
 public class CalculatorPlus extends AppCompatActivity {
 
     TextView resultado;
-    public double operando1,operando2,res;
-    int ope;
+
+    public double operando1 = 0;
+    public double operando2 = 0;
+    public double res = 0;
+    int ope = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator_plus);
 
         resultado =(TextView)findViewById(R.id.resultados);
+
 
     }
 
@@ -93,19 +101,47 @@ public class CalculatorPlus extends AppCompatActivity {
 
         String aux;
         aux = resultado.getText().toString();
-        operando1 = Double.parseDouble(aux);
-        resultado.setText("");
-        ope = 1;
+
+        if(aux.isEmpty()){
+
+            Toast toast1 =
+                    makeText(getApplicationContext(),
+                            "Introduce numerito para sumar nene", Toast.LENGTH_SHORT);
+
+            toast1.show();
+
+
+        }else{
+
+            operando1 = parseDouble(aux);
+            resultado.setText("");
+            ope = 1;
+
+        }
+
 
     }
-
     public void resta(View v){
 
         String aux;
         aux = resultado.getText().toString();
-        operando1 = Double.parseDouble(aux);
-        resultado.setText("");
-        ope = 2;
+
+        if(aux.isEmpty()) {
+
+            Toast toast1 =
+                    makeText(getApplicationContext(),
+                            "Introduce numerito para restar nene", Toast.LENGTH_SHORT);
+
+            toast1.show();
+
+        }else{
+
+            operando1 = parseDouble(aux);
+            resultado.setText("");
+            ope = 2;
+
+        }
+
 
     }
 
@@ -113,9 +149,21 @@ public class CalculatorPlus extends AppCompatActivity {
 
         String aux;
         aux = resultado.getText().toString();
-        operando1 = Double.parseDouble(aux);
-        resultado.setText("");
-        ope = 3;
+
+        if(aux.isEmpty()) {
+
+            Toast toast1 =
+                    makeText(getApplicationContext(),
+                            "Introduce numerito para multipli nene", Toast.LENGTH_SHORT);
+
+            toast1.show();
+
+        }else {
+
+            operando1 = parseDouble(aux);
+            resultado.setText("");
+            ope = 3;
+        }
 
     }
 
@@ -123,9 +171,20 @@ public class CalculatorPlus extends AppCompatActivity {
 
         String aux;
         aux = resultado.getText().toString();
-        operando1 = Double.parseDouble(aux);
-        resultado.setText("");
-        ope = 4;
+
+        if(aux.isEmpty()) {
+
+            Toast toast1 =
+                    makeText(getApplicationContext(),
+                            "Introduce numerito para dividi nene", Toast.LENGTH_SHORT);
+
+            toast1.show();
+
+        }else {
+            operando1 = parseDouble(aux);
+            resultado.setText("");
+            ope = 4;
+        }
 
     }
 
@@ -133,36 +192,50 @@ public class CalculatorPlus extends AppCompatActivity {
 
         String aux1;
         aux1 = resultado.getText().toString();
-        operando2 = Double.parseDouble(aux1);
-        resultado.setText("");
 
-        if(ope == 1){
+        if(aux1.isEmpty()){
 
-            res = operando1 + operando2;
-        }else if (ope == 2){
+            Toast toast1 =
+                    makeText(getApplicationContext(),
+                            "Introduce numerito para dividi nene", Toast.LENGTH_SHORT);
 
-            res = operando1 - operando2;
+            toast1.show();
 
-        }else if (ope == 3){
 
-            res = operando1 * operando2;
+        }else {
 
-        }else if(ope == 4){
+            operando2 = Double.parseDouble(aux1);
+            if (ope == 1) {
 
-            if(operando2 == 0.0){
+                res = operando1 + operando2;
 
-                resultado.setText("Error nene andeva a dividi por cero");
-            }else{
+            } else if (ope == 2) {
 
-                res = operando1/operando2;
+                res = operando1 - operando2;
+
+            } else if (ope == 3) {
+
+                res = operando1 * operando2;
+
+            } else if (ope == 4) {
+
+                if (operando2 == 0.0) {
+
+                    resultado.setText("Error nene andeva a dividi por cero");
+
+                } else {
+
+                    res = operando1 / operando2;
+                }
+
             }
 
+            resultado.setText(" " + res);
         }
 
-        resultado.setText("" + res);
+            }
 
 
-    }
 
     public void limpiar(View v){
 
