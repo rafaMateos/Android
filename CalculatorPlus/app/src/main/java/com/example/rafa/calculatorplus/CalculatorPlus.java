@@ -101,6 +101,12 @@ public class CalculatorPlus extends AppCompatActivity {
 
         String aux;
         aux = resultado.getText().toString();
+<<<<<<< Updated upstream
+=======
+        operando1 = Double.parseDouble(aux);
+        resultado.setText("");
+        this.ope = 1;
+>>>>>>> Stashed changes
 
         if(aux.isEmpty()){
 
@@ -125,6 +131,7 @@ public class CalculatorPlus extends AppCompatActivity {
 
         String aux;
         aux = resultado.getText().toString();
+<<<<<<< Updated upstream
 
         if(aux.isEmpty()) {
 
@@ -142,6 +149,11 @@ public class CalculatorPlus extends AppCompatActivity {
 
         }
 
+=======
+        operando1 = Double.parseDouble(aux);
+        resultado.setText("");
+        this.ope = 2;
+>>>>>>> Stashed changes
 
     }
 
@@ -149,6 +161,7 @@ public class CalculatorPlus extends AppCompatActivity {
 
         String aux;
         aux = resultado.getText().toString();
+<<<<<<< Updated upstream
 
         if(aux.isEmpty()) {
 
@@ -164,6 +177,11 @@ public class CalculatorPlus extends AppCompatActivity {
             resultado.setText("");
             ope = 3;
         }
+=======
+        operando1 = Double.parseDouble(aux);
+        resultado.setText("");
+        this.ope = 3;
+>>>>>>> Stashed changes
 
     }
 
@@ -171,6 +189,7 @@ public class CalculatorPlus extends AppCompatActivity {
 
         String aux;
         aux = resultado.getText().toString();
+<<<<<<< Updated upstream
 
         if(aux.isEmpty()) {
 
@@ -185,6 +204,11 @@ public class CalculatorPlus extends AppCompatActivity {
             resultado.setText("");
             ope = 4;
         }
+=======
+        operando1 = Double.parseDouble(aux);
+        resultado.setText("");
+        this.ope = 4;
+>>>>>>> Stashed changes
 
     }
 
@@ -193,6 +217,7 @@ public class CalculatorPlus extends AppCompatActivity {
         String aux1;
         aux1 = resultado.getText().toString();
 
+<<<<<<< Updated upstream
         if(aux1.isEmpty()){
 
             Toast toast1 =
@@ -206,14 +231,28 @@ public class CalculatorPlus extends AppCompatActivity {
 
             operando2 = Double.parseDouble(aux1);
             if (ope == 1) {
+=======
+        if(this.ope == 1){
+
+            res = operando1 + operando2;
+        }else if (this.ope == 2){
+>>>>>>> Stashed changes
 
                 res = operando1 + operando2;
 
+<<<<<<< Updated upstream
             } else if (ope == 2) {
+=======
+        }else if (this.ope == 3){
+>>>>>>> Stashed changes
 
                 res = operando1 - operando2;
 
+<<<<<<< Updated upstream
             } else if (ope == 3) {
+=======
+        }else if(this.ope == 4){
+>>>>>>> Stashed changes
 
                 res = operando1 * operando2;
 
