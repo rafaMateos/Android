@@ -18,15 +18,16 @@ public class Form_Send extends AppCompatActivity {
         setContentView(R.layout.activity_form__send);
 
         login = (Button)findViewById(R.id.buttonLogin);
-        Activity pant = new Activity();
-        pant.
+
 
     }
     public void Login(View v){
 
+        Intent intent = new Intent(this, SecondDisplay.class);
 
-        Intent ListSong = new Intent(v.getContext(),);
-        startActivity(ListSong);
+        startActivity(intent);
+
+
 
     }
 
