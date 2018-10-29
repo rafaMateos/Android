@@ -18,7 +18,15 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        texto = (TextView)findViewById(R.id.)
+        texto = (TextView)findViewById(R.id.todo);
+
+        OnSwipeTouchListener m = new OnSwipeTouchListener(texto.getContext());
+        
+
+    }
+
+
+
 
 
     }
@@ -26,10 +34,3 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-    }
-
-
-
-
-}
