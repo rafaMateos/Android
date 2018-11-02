@@ -1,5 +1,6 @@
 package com.example.rmateos.viewholder;
 
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -7,14 +8,6 @@ public class ViewHolder {
 
     private TextView texto;
     private ImageView image;
-
-
-    public ViewHolder(){
-
-        texto.setText(" ");
-        image.setColorFilter(0);
-
-    }
 
 
     public ViewHolder (TextView texto,ImageView image){
@@ -36,15 +29,5 @@ public class ViewHolder {
 
     }
 
-    public void setTexto(TextView texto){
 
-        this.texto = texto;
-
-    }
-
-    public void setImage(ImageView image){
-
-        this.image = image;
-
-    }
 }
