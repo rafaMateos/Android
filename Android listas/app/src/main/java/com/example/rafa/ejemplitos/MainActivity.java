@@ -2,6 +2,7 @@ package com.example.rafa.ejemplitos;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.appcompat.*;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +20,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Quitamos el actionBar porque es mas feo que pegarle a un padre.
-        getSupportActionBar().hide();
+        try{
+
+            getSupportActionBar().hide();
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
 
         Ganalocal = findViewById(R.id.textView10);
         Empate = findViewById(R.id.textView12);
@@ -76,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void irLista(View view) {
 
-        Intent ListSong = new Intent(getApplicationContext(),lista.class);
-        startActivity(ListSong);
+        //Intent ListSong = new Intent(getApplicationContext(),lista.class);
+        //startActivity(ListSong);
     }
 }
