@@ -1,8 +1,10 @@
 package com.example.rmateos.probandoficheros;
 
+import android.nfc.Tag;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,6 +16,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,17 +34,22 @@ public class MainActivity extends AppCompatActivity {
         int size;
         int numero;
         Integer ret;
+        InputStream is =  null;
         try{
 
-            InputStream is = getAssets().open("file.txt");
+            is = getAssets().open("logins.txt");
             size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-            String textoo = new String(buffer);
-            numero = Integer.parseInt(textoo);
-            ret = numero + 2;
-            b.setText(ret.toString());
+            ArrayList<String> texto = new ArrayList<>();
+            texto.add(buffer.toString());
+
+            for(int i = 0; i<texto.size(); i++){
+
+                b.setText(texto.get(i).toString());
+
+            }
 
 
         }catch(Exception e){

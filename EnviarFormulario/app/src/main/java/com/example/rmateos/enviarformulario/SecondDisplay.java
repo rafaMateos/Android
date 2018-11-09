@@ -52,10 +52,9 @@ public class SecondDisplay extends AppCompatActivity {
         //rfc822 STANDARD FOR THE FORMAT OF INTERNET MESSAGE
         intent.setType("message/rfc822");
 
-        
         startActivity(Intent.createChooser(intent,"Elije una"));
 
-
+        //startActivityForResult(Intent.createChooser(intent,"Choose one nene"));
 
 
     }

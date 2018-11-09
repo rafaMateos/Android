@@ -8,7 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import java.io.InputStream;
+import java.util.ArrayList;
 
 public class Login extends AppCompatActivity {
 
@@ -28,27 +30,39 @@ public class Login extends AppCompatActivity {
         int size;
         int numero;
         Integer ret;
+        boolean loginBoll = false;
+
+        InputStream is =  null;
 
         try{
 
-            InputStream is = getAssets().open("logins.txt");
+             is = getAssets().open("logins.txt");
             size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
             String textoo = new String(buffer);
 
-            if(username.getText().toString().equals(textoo)){
+            String [] login = textoo.split(",");
 
 
-                Intent ListSong = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(ListSong);
+            for(int i = 0; i< login.length || !loginBoll; i++ ){
 
-            }else{
 
-                Toast.makeText(null,"LoginFailed",Toast.LENGTH_SHORT).show();
+                if(login[i].equals(username.getText().toString())){
+
+                    Intent ListSong = new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(ListSong);
+                    loginBoll = true;
+
+                }else{
+
+                    Toast.makeText(this,"LoginFailed",Toast.LENGTH_SHORT).show();
+
+                }
 
             }
+
 
 
         }catch(Exception e){
@@ -57,8 +71,11 @@ public class Login extends AppCompatActivity {
 
         }finally {
 
+            //is.close(); //TODO
 
         }
+
+
 
 
 
