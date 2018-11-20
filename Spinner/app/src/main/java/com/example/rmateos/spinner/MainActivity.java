@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -19,6 +21,7 @@ public class MainActivity extends Activity
     public static ArrayList<Producto> items = new ArrayList<>();
 
     private TextView selecionado;
+    private Button newDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class MainActivity extends Activity
 
         selecionado = findViewById(R.id.select);
         Spinner spin = findViewById(R.id.spinner);
+        newDisplay = findViewById(R.id.NewDisplay);
 
         spin.setOnItemSelectedListener(this);
 
@@ -58,11 +62,10 @@ public class MainActivity extends Activity
         selecionado.setText(items.get(position).getNombreProducto());
 
         if(selecionado.getText().equals("Azucar")){
-
-            Intent intent = new Intent(this, Azuca.class);
-
-            startActivity(intent);
-
+            Intent intent = new Intent(this,Azuca.class);
+            //Le pasamos el objeto para que lo añada a la lista
+            intent.putExtra("Producto",items.get(position));
+            startActivityForResult(intent,1);
 
         }
     }
@@ -73,5 +76,26 @@ public class MainActivity extends Activity
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+
+                Toast.makeText(this,"AñadidoPerfectamento",Toast.LENGTH_SHORT).show();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
+    }//onActivityResult
+
+    public void Abrir(View view){
+
+        Intent intent = new Intent(this, Azuca.class);
+        //Le pasamos el objeto para que lo añada a la lista
+        startActivityForResult(intent,1);
+
+    }
 
     }

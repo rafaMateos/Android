@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Azuca">
 
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="105dp" />
 </android.support.constraint.ConstraintLayout>
