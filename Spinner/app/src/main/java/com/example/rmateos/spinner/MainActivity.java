@@ -80,6 +80,7 @@ public class MainActivity extends Activity
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         if (requestCode == 1) {
+
             if(resultCode == Activity.RESULT_OK){
 
                 Toast.makeText(this,"AñadidoPerfectamento",Toast.LENGTH_SHORT).show();

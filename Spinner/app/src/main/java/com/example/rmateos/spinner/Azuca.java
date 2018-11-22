@@ -26,6 +26,7 @@ public class Azuca extends AppCompatActivity
 
         items.add(recibido);
 
+
         Spinner spin = findViewById(R.id.spinner2);
 
         spin.setOnItemSelectedListener(this);

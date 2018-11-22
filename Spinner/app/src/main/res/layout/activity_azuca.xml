@@ -12,4 +12,20 @@
         android:layout_height="46dp"
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="105dp" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="182dp"
+        android:layout_height="106dp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+    <WebView
+        android:layout_width="368dp"
+        android:layout_height="187dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="316dp"
+        />
+
+
 </android.support.constraint.ConstraintLayout>

@@ -22,6 +22,7 @@ public class SecondDisplay extends AppCompatActivity {
         Emails = (EditText)findViewById(R.id.Emails);
         Asunto = (EditText)findViewById(R.id.Asunto);
         msg = (EditText)findViewById(R.id.texto);
+        msg.setText("");
 
         Button send = (Button)findViewById(R.id.Send);
         send.setOnClickListener(new View.OnClickListener() {
@@ -34,12 +35,10 @@ public class SecondDisplay extends AppCompatActivity {
 
     public void sendMail(){
 
-
         String emails = Emails.getText().toString();
 
         //Guardamos los emails en en array y los separamos por comas
         String arrayEmails[] = emails.split(",");
-
         String asunto = Asunto.getText().toString();
         String mensag = msg.getText().toString();
 
@@ -51,10 +50,11 @@ public class SecondDisplay extends AppCompatActivity {
 
         //rfc822 STANDARD FOR THE FORMAT OF INTERNET MESSAGE
         intent.setType("message/rfc822");
+        //intent.addCategory("");
 
         startActivity(Intent.createChooser(intent,"Elije una"));
 
-        //startActivityForResult(Intent.createChooser(intent,"Choose one nene"));
+        //startActivityForResult(Intent.createChooser(intent,"1"));
 
 
     }

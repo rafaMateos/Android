@@ -7,19 +7,14 @@ public class Producto implements Parcelable {
 
     private String nombreProducto;
     private double precio;
+
     public Producto(String nombreProducto, double precio) {
 
         this.nombreProducto = nombreProducto;
         this.precio = precio;
 
     }
-
-    public Producto() {
-
-
-    }
-
-
+    public Producto() { }
 
     public String getNombreProducto() {
         return nombreProducto;
